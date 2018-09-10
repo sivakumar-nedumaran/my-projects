@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Carte Blanche'18</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Let's Party Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">   
+<link href="css/font-awesome.css" rel="stylesheet">		<!-- font-awesome icons -->    
+<link rel="stylesheet" href="css/lightbox.css"> 
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" /> 
+<!-- //Custom Theme files --> 
+<!-- js -->
+<script src="js/jquery-2.2.3.min.js"></script>  
+<!-- //js -->
+<!-- web-fonts -->   
+<link href="//fonts.googleapis.com/css?family=Trochut:400,400i,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+<audio preload="auto" id="myAudio" src="bgm.mp3" loop="true" autobuffer>
+                Unsupported in Firefox
+</audio>
+<script>
+document.getElementsByTagName("body")[0].style.cursor = "url(hp_cursor.png) 32 28, auto";
+</script>
+<style>
+ /* Dropdown Button */
+.dropbtn {
+    background-color: rgba(0,0,0,0);
+    color: white;
+    
+    font-size: 16px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: rgba(0,0,0,0);
+} 
+</style>
+<script type='text/javascript'>
+
+var aud = document.getElementById("myAudio");
+
+function enableMute() { 
+	if(!aud.muted)
+	    aud.muted = true;
+	else
+		aud.muted = false;
+} 
+
+function sendmail()
+{
+		var mail=document.getElementById("submail").value;
+		$.ajax(
+		{
+			type:"POST",
+			url:"subscribe.php",
+			data:"email="+mail,
+			dataType:"json",
+			success:function(response)
+			{
+				alert(response);
+				if (response=="success") 
+					alert("Subscribed to Mail list");
+				else
+					alert("Failed to subscribe");
+			}
+			
+		});
+		return false;
+}
+</script>
+<script>
+	
+function setCookie(c_name,value,exdays)
+{
+    var exdate=new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+    document.cookie=c_name + "=" + c_value;
+}
+
+function getCookie(c_name)
+{
+    var i,x,y,ARRcookies=document.cookie.split(";");
+    for (i=0;i<ARRcookies.length;i++)
+    {
+      x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+      y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+      x=x.replace(/^\s+|\s+$/g,"");
+      if (x==c_name)
+        {
+        return unescape(y);
+        }
+      }
+}
+
+var song = document.getElementsByTagName('audio')[0];
+var played = false;
+var tillPlayed = getCookie('timePlayed');
+function update()
+{
+    if(!played){
+        if(tillPlayed){
+        song.currentTime = tillPlayed;
+        song.play();
+        played = true;
+        }
+        else {
+                song.play();
+                played = true;
+        }
+    }
+
+    else {
+    setCookie('timePlayed', song.currentTime);
+    }
+}
+setInterval(update,1000);
+</script>
+<style>
+#ab, #useremail {
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+    width: 100%;
+    border: none;
+    border-bottom: 1px dashed #ccc;
+    -webkit-appearance: none;
+    margin-bottom: 2em;
+    background: transparent;
+}
+.black_overlay{
+			display: none;
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			width: 100%;
+			height: 100%;
+			background-color: black;
+			z-index:1001;
+			-moz-opacity: 0.8;
+			opacity:.80;
+			filter: alpha(opacity=80);
+		}
+		.white_content {
+			display: none;
+			position: absolute;
+			top: 25%;
+			left: 25%;
+			width: 50%;
+			height: 50%;
+			padding: 16px;
+			border: 16px solid orange;
+			background-color: white;
+			z-index:1002;
+			overflow: auto;
+		}
+</style>		
+<!-- //web-fonts -->
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"> 
+	<!-- banner -->
+	<div id="home" class="w3ls-banner w3-agilefireworks jarallax"> 
+		<!-- header -->
+		<div class="header-w3layouts"> 
+			<!-- Navigation -->
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container">
+					<div class="navbar-header page-scroll">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+							<span class="sr-only">CB '18</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<h1><a class="navbar-brand" href="index.html"><img height=40px src="csmit.png"></img></a></h1>
+					</div> 
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse navbar-ex1-collapse">
+						<ul class="nav navbar-nav navbar-right cl-effect-15">
+							<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+							<li><a class="page-scroll" href="#home" data-hover="Home">Home</a></li> 
+							<li><a class="page-scroll" href="#services" data-hover="What's Special">What's Special</a></li>
+							<li><a class="page-scroll" href="#events" data-hover="Events">Events</a></li>
+							<li><a class="page-scroll" href="#workshops" data-hover="Workshops">Workshops</a></li>
+							<li><a class="page-scroll" href="#sponsors" data-hover="Sponsors">Sponsors</a></li>
+							<li> <div class="dropdown">
+  								<button class="dropbtn">UNIQ</button>
+  								<div class="dropdown-content">
+    								<a href="http://www.inplanttraining.org/" target="_blank">IPT</a>
+    								<a href="http://www.internshipinchennai.com/" target="_blank">Internship</a>
+    								<a href="http://www.ieeefinalyearprojects.org/" target="_blank">IEEE projects</a>
+    								<a href="http://www.androidtraininginchennai.com/" target="_blank">Android Training</a>
+    								<a href="http://www.uniqtechnologies.co.in/" target="_blank"><img border="0"  src="spon5.png" width="150px"></a>
+  								</div>
+							</div> </li>
+							<li><a class="page-scroll" href="#contact" data-hover="Contact">Contact</a></li>
+							<li><img src="audio.png" width="25" height="25" onclick="enableMute()"></li>
+							<li class="w3ls-navlog"><a class="page-scroll" href="#myModal2" data-toggle="modal" data-hover="Register / Login">Register / Login</a></li>
+						</ul>
+					</div>
+					<!-- /.navbar-collapse -->
+				</div>
+				<!-- /.container -->
+			</nav>  
+		</div>	
+		<!-- //header -->
+		<!-- banner-text -->
+		
+		<div style="height: 100%; width: 100%;" class="col-xs-18 banner-text"> 
+           <center> <img style="margin-top=-800px;" height=125px src="cb.png"></img></center>
+			<center> <img  width="60%" src="harfin.png"></img></center>
+			<!-- timer -->
+			<div class="agileits-timer"> 
+				<div class="clock">
+					<div class="column days">
+						<div class="timer" id="days"></div>
+						<div class="text">Days</div>
+					</div>
+					<div class="timer days"></div>
+					<div class="column">
+						<div class="timer" id="hours"></div>
+						<div class="text">Hours</div>
+					</div>
+					<div class="timer"></div>
+					<div class="column">
+						<div class="timer" id="minutes"></div>
+						<div class="text">Minutes</div>
+					</div>
+					<div class="timer"></div>
+					<div class="column">
+						<div class="timer" id="seconds"></div>
+						<div class="text">Seconds</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>	 
+			</div>
+			<!-- //timer --> 
+			<a class="page-scroll wthree-btn" href="#myModal2" data-toggle="modal">Get Your Entry Ticket </a> 
+		</div> 
+		<!-- //banner-text -->   
+		
+	</div>	
+	<!-- //banner --> 
+	<!-- welcome -->
+	<div class="welcome">    
+		<div class="welcome-agileinfo">
+			<div style="background-color: #A0A0A0;" class="col-sm-6 col-xs-6 welcome-w3left">
+				<div class="col-xs-3 welcome-w3limg">
+					<i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
+				</div>
+				<div  class="col-xs-9 welcome-w3ltext"> 
+					<p>When</p>
+					<h4 style="color: #404044;">9<sup>th</sup>- 11<sup>th</sup>Feb 2018</h4>
+					<h6>Starting at : 8:30 am </h6>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div style="background-color: #404040;" class="col-sm-6 col-xs-6 welcome-w3right">
+				<div class="col-xs-9 welcome-w3ltext"> 
+					<p>Where</p>
+					<h4>MIT</h4>
+					<h6>Anna University </h6>
+				</div>
+				<div class="col-xs-3 welcome-w3limg">
+					<i class="fa fa-street-view" aria-hidden="true"></i>
+				</div> 
+				<div class="clearfix"> </div>
+			</div> 
+			<div class="clearfix"> </div>
+		</div> 
+	</div>
+	<!-- //welcome -->
+	<!-- services -->
+	<div id="services" class="services">
+		<div class="container">  
+			<h3 class="w3stitle">What's Special</h3>  
+			<div class="services-w3ls-row">
+			
+				<div class="col-md-3  services-grid agileits-w3layouts"><!--a href="" -->
+					<span class="glyphicon effect-1" aria-hidden="true"><img src="images/house1.png" height="100" width="100"></span>
+					<h5>Back to School</h5>
+					<p>Enthralling events and games designed exclusively for the school children!</p>
+					<!--/a-->
+				</div>
+				<div class="col-md-3  services-grid agileits-w3layouts"><!--a href="" -->
+					<span class="glyphicon effect-1" aria-hidden="true"><img src="images/house3.png" height="100" width="100"></span>
+					<h5>CBKO'18</h5>
+					<p>Carte Blanche Kube Open'18 organized by the World Cube Association themselves!</p>
+					<!--/a-->
+				</div>
+				<div class="col-md-3  services-grid agileits-w3layouts"><a class="page-scroll" href="#myModal2" data-toggle="modal" >
+					<span class="glyphicon effect-1" aria-hidden="true"><img src="images/house2.png" height="100" width="100"></span>
+					<h5>Presentations</h5>
+					<p>Got some awesome ideas or projects? Bring it on to present and win exciting prizes!  Click to register</p>
+					</a>
+				</div>
+				<div class="col-md-3  services-grid"><a class="page-scroll" href="#myModal2" data-toggle="modal" >
+					<span class="glyphicon effect-1" aria-hidden="true"><img src="images/house4.png" height="100" width="100"></span>
+					<h5>Hackathon</h5>
+					<p>An exclusive full day hackathon for those insomniac developers. And guess what, it ends with pizza night! Click to register</p>
+					</a>
+				</div> 
+				<div class="clearfix"> </div>
+			</div>  
+		</div>
+	</div>
+	<!-- //services -->
+	<!-- video -->
+	<div class="video-agileits jarallax">
+		<div class="video">
+			<div class="container"> 
+				<div class="col-md-6 video-left">
+					<h3 class="w3stitle w3stitle1">About us</h3>  
+					<h5 style="color: #cbcbcb; font-size: 20px; text-align: justify">The Computer Society of MIT - Anna University was founded in 1983 improving the knowledge of students in the field of computer science. Being the inter-disciplinary technical student body of MIT, CSMIT comprises of 9 departments and has been synonymous with bringing new, exciting and innovative ideas of the students to the forefront of our college community. Over the years, the society has evolved, from being just an organization for imparting knowledge, to an active participant in the evolution and promotion of Free Open Source Software (FOSS). The major event associated with this area is the conducting of the national level inter college free software festival Carte Blanche every year.</h5> 
+					</div> 
+				<div class="col-md-6 video-right"> 
+					 <video width="320" height="240" controls>
+  <source src="images/teaser.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video> 
+					<div id="small-dialog2" class="mfp-hide">
+						<div class="pop_up w3-agile">
+							<iframe src="https://www.youtube.com/embed/9JX4hCTuiEw"></iframe>
+						</div>   
+					</div> 
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //video -->
+	<!-- features -->
+	<div class="features">
+		<div class="container">   
+			<div class="wthree-features-row">
+				<div class="col-md-3 col-xs-6 features-w3grid">
+					<div class="col-xs-4 features-w3lleft">
+						<i class="fa fa-map-marker" aria-hidden="true"></i>
+					</div>
+					<div class="col-xs-8 features-w3lright"> 
+						<p>LOCATION</p>
+						<h4 style="font-size: 15px;">MIT, Chrompet</h4>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-3 col-xs-6 features-w3grid">
+					<div class="col-xs-4 features-w3lleft">
+						<i class="fa fa-ticket" aria-hidden="true"></i>
+					</div>
+					<div class="col-xs-8 features-w3lright"> 
+						<p>WORKSHOPS</p>
+						<h4>10+</h4>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-3 col-xs-6 features-w3grid">
+					<div class="col-xs-4 features-w3lleft">
+						<i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
+					</div>
+					<div class="col-xs-8 features-w3lright"> 
+						<p>EVENTS</p>
+						<h4>30+ </h4>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-3 col-xs-6 features-w3grid">
+					<div class="col-xs-4 features-w3lleft">
+						<i class="fa fa-users" aria-hidden="true"></i> 
+					</div>
+					<div class="col-xs-8 features-w3lright"> 
+						<p>PRIZES WORTH</p>
+						<h4 style="font-size: 23px;">5 Lakh+</h4>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //features -->
+	<!-- services -->
+	<div id="events" class="services">
+		<div style=" margin-bottom: -20px;" class="container">  
+			<h3 class="w3stitle">Our Events</h3>  
+			
+				<iframe  src="event/radio.html" width=100% height=1000 frameborder=0></iframe>
+		</div>
+	</div>
+	<!-- //services -->
+	<!-- prices -->
+	<div id="workshops" class="prices w3-agilefireworks jarallax">
+		<div class="pricesw3-agileits">
+			<div class="container"> 
+				<h3 class="w3stitle w3stitle1">Our Workshops</h3>  
+				<div class="prices-agileinfo">
+					<div class="col-md-4 price-w3lgrids">
+						<div class="pricing pricing-two">
+							<div class="pricing-top top-two">
+								<h3>Algo</h3>
+							</div>
+							<div class="pricing-bottom"> 
+								<p>Ethical Hacking and Cyber Security</p> 
+								<p>Deep Learning and Machine Intelligence</p> 
+								<p>Nougat App Development</p> 
+								<div class="agileits-buy">
+									<a class="page-scroll" href="#myModal2" data-toggle="modal">Enroll Now</a>
+								</div>
+							</div>
+						</div>  
+					</div>
+					<div class="col-md-4 price-w3lgrids">
+						<div class="pricing pricing-one">
+							<div class="pricing-top top-one">
+								<h3>Elex</h3>
+							</div>
+							<div class="pricing-bottom"> 
+								<p>Internet of Things and Networking</p> 
+								<p>Robotics in Defence and Defence Electronics</p> 
+								<p>Embedded C Programming in PIC using Proteus</p> 
+								<div class="agileits-buy">
+									<a class="page-scroll" href="#myModal2" data-toggle="modal">Enroll Now</a>
+								</div>
+							</div>
+						</div>  
+					</div>
+					<div class="col-md-4 price-w3lgrids">
+						<div class="pricing pricing-three">
+							<div class="pricing-top top-three">
+								<h3>Mech</h3>
+							</div>
+							<div class="pricing-bottom wthree"> 
+								<p>Live surgery of IC Engine with competition</p> 
+								<p>Automotive Sketching & Aerodynamics Modelling</p> 
+								<p>Mechanical materials with industrial visit</p> 
+								<div class="agileits-buy">
+									<a class="page-scroll" href="#myModal2" data-toggle="modal">Enroll Now</a>
+								</div>
+							</div>
+						</div>  
+					</div> 
+					
+					<div class="clearfix"> </div>  
+				</div> 
+			</div> 
+		</div>
+	</div>
+	<!-- //prices -->
+	
+	<!-- subscribe -->
+	<div id="sponsors" class="team" style="padding: 0 0;">  
+		<div class="subscribe-agileinfo">  
+			<div class="container"> 
+					<h3 class="w3stitle"><font color="white">Our Sponsors</font></h3> <br>
+					<center><a href="http://www.licindia.in" target="_blank"><img style="margin: 1.5%;" src="spon1.png" width="150px"></a>  <img src="spon4.png" style="margin: 1.5%;" width="100px">  <img src="spon3.png" style="margin-left: 1.5%;" width="150px"><img src="spon3.jpg" style="margin-right: 1.5%;" width="150px">   <a href="http://www.uniqtechnologies.co.in/" target="_blank"><img border="0"  src="spon5.png" style="margin: 1.5%;" width="150px"></a> <img src="spon2.png" style="margin: 1.5%;" width="150px"></center><br>
+					<h3 class="w3stitle"><font color="white">Our Media Partners</font></h3> <br>
+					<center><img style="margin: 1.5%;" src="news7.png" width="150px">  <img src="vikatan.jpg" style="margin: 1.5%;" width="150px"></center>			
+				<div class="clearfix"></div> 
+			</div>
+		</div>
+	</div>
+	<!-- //subscribe -->
+	<!-- team -->
+	<div id="staff" class="team">  
+		<div class="container">  
+			<h3 class="w3stitle">Our  Team</h3>  
+			<div class="team-agileinfo w3ls-team-row">  
+				<div class="col-md-2 col-sm-4 col-xs-4 team-wthree-grids">   
+					<div class="w3ls-effect11">
+						<img src="images/t1.jpg" alt="img">
+						<div class="overlay"> 
+							<div class="w3social-icons"> 
+							</div>   
+							<h5>Kaushik D</h5>
+							<p>Chairman</p>
+						</div>	 
+					</div>    
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-4 team-wthree-grids">   
+					<div class="w3ls-effect11">
+						<img src="images/t2.jpg" alt="img"> 
+						<div class="overlay"> 
+							<div class="w3social-icons"> 
+							</div>   
+							<h5>Hariharan M</h5>
+							<p>Vice-Chairman</p>
+						</div>
+					</div>    
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-4 team-wthree-grids">   
+					<div class="w3ls-effect11">
+						<img src="images/t3.jpg" alt="img"> 
+						<div class="overlay"> 
+							<div class="w3social-icons"> 
+							</div>   
+							<h5> Jegatheesh A</h5>
+							<p>CEO</p>
+						</div>
+					</div>    
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-4 team-wthree-grids">   
+					<div class="w3ls-effect11">
+						<img src="images/t4.jpg" alt="img"> 
+						<div class="overlay"> 
+							<div class="w3social-icons"> 
+							</div>   
+							<h5>Sivakumar N</h5>
+							<p>CEA</p>
+						</div>
+					</div>    
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-4 team-wthree-grids">   
+					<div class="w3ls-effect11">
+						<img src="images/t5.jpg" alt="img"> 
+						<div class="overlay"> 
+							<div class="w3social-icons"> 
+							</div>   
+							<h5>Priyadharshini</h5>
+							<p>Secretary</p>
+						</div>
+					</div>    
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-4 team-wthree-grids">   
+					<div class="w3ls-effect11">
+						<img src="images/t6.jpg" alt="img"> 
+						<div class="overlay"> 
+							<div class="w3social-icons"> 
+							</div>   
+							<h5>Bharath Raj Y</h5>
+							<p>Treasurer</p>
+						</div>
+					</div>    
+				</div>
+				<div class="clearfix"> </div> 
+			</div>
+		</div>
+	</div>
+	<!-- //team -->  
+	<!-- gallery -->
+	<div id="gallery" class="gallery">
+		<div class="container"> 
+			<h3 class="w3stitle">Glimpse of CB'17</h3>  
+			<div class="gallery-w3lsrow">
+				<div class="col-sm-3 col-xs-4 gallery-grids">
+					<div class="w3ls-hover">
+						<a href="images/g1.jpeg" data-lightbox="example-set" data-title="Handmade center piece representing CB-17's high spot - The Maker's Faire">
+							<img src="images/g1.jpeg" class="img-responsive zoom-img" alt=""/>
+							<div class="view-caption">
+								<h5>View</h5>
+								<span class="glyphicon glyphicon-search"></span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-sm-3 col-xs-4 gallery-grids">
+					<div class="w3ls-hover">
+						<a href="images/g2.jpeg" data-lightbox="example-set" data-title="Bonjour from Team Csmit - Welcome plank decorated and designed by our association members">
+							<img src="images/g2.jpeg"  class="img-responsive zoom-img" alt=""/>
+							<div class="view-caption">
+								<h5>View</h5>
+								<span class="glyphicon glyphicon-search"></span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-sm-3 col-xs-4 gallery-grids">
+					<div class="w3ls-hover">
+						<a href="images/g3.jpeg" data-lightbox="example-set" data-title="We are here to provide the best ambiance and witness our mindful participants give their best and set high benchmarks for the world. Happy Cubing!">
+							<img src="images/g3.jpeg" class="img-responsive zoom-img" alt=""/>
+							<div class="view-caption">
+								<h5>View</h5>
+								<span class="glyphicon glyphicon-search"></span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-sm-3 col-xs-4 gallery-grids">
+					<div class="w3ls-hover">
+						<a href="images/g4.jpeg" data-lightbox="example-set" data-title="Beautiful and auspicious start to the inauguration of CB-17 Prof. Catherine Bina in the presence of our honorable Dean, staff incharge and the team">
+							<img src="images/g4.jpeg" class="img-responsive zoom-img" alt=""/>
+							<div class="view-caption">
+								<h5>View</h5>
+								<span class="glyphicon glyphicon-search"></span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-sm-3 col-xs-4 gallery-grids">
+					<div class="w3ls-hover">
+						<a href="images/g5.jpeg" data-lightbox="example-set" data-title="Overwhelming crowd for Cb-17 mesmerizing hustle and bustle at the registration desk">
+							<img src="images/g5.jpeg" class="img-responsive zoom-img" alt=""/>
+							<div class="view-caption">
+								<h5>View</h5>
+								<span class="glyphicon glyphicon-search"></span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-sm-3 col-xs-4 gallery-grids">
+					<div class="w3ls-hover">
+						<a href="images/g6.jpeg" data-lightbox="example-set" data-title="With electronics, they get smaller and smaller as the ideas get bigger and better">
+							<img src="images/g6.jpeg" class="img-responsive zoom-img" alt=""/>
+							<div class="view-caption">
+								<h5>View</h5>
+								<span class="glyphicon glyphicon-search"></span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-sm-3 col-xs-4 gallery-grids">
+					<div class="w3ls-hover">
+						<a href="images/g7.jpeg" data-lightbox="example-set" data-title="Participants in group taking challenging tests that were conducted and well coordinated by the team">
+							<img src="images/g7.jpeg" class="img-responsive zoom-img" alt=""/>
+							<div class="view-caption">
+								<h5>View</h5>
+								<span class="glyphicon glyphicon-search"></span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-sm-3 col-xs-4 gallery-grids">
+					<div class="w3ls-hover">
+						<a href="images/g8.jpeg" data-lightbox="example-set" data-title="Being the proud sowers of knowledge for the future generation reapers - participation of young and talented schools students in various events specially conducted for them">
+							<img src="images/g8.jpeg" class="img-responsive zoom-img" alt=""/>
+							<div class="view-caption">
+								<h5>View</h5>
+								<span class="glyphicon glyphicon-search"></span>
+							</div>
+						</a>
+					</div>
+				</div>  
+				<div class="clearfix"> </div> 
+			</div>
+			<!--  light box js -->
+			<script src="js/lightbox-plus-jquery.min.js"> </script> 
+			<!-- //light box js--> 
+		</div> 
+	</div>
+	<!-- //gallery -->
+	
+	<!-- contact -->
+	<div id="contact" class="contact">
+		<div class="container"> 
+			<h3 class="w3stitle">Contact <span> us</span></h3>
+			<div class="contact-row agileits-w3layouts">  
+				<div class="col-md-6 col-sm-6 contact-w3lsleft">
+					<div class="contact-grid agileits">
+						<h4>Drop Us a Line</h4>
+						<form action="comments.php" method="post"> 
+							<input type="text" name="Name" placeholder="Name" required="">
+							<input type="email" name="Email" placeholder="Email" required=""> 
+							<input type="text" name="Phone Number" placeholder="Phone Number" required="">
+							<textarea name="Message" placeholder="Message..." required=""></textarea>
+							<input type="submit" value="Submit" >
+						</form> 
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6 contact-w3lsright">
+					<div class="address-row">
+						<div class="col-xs-2 address-left">
+							<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+						</div>
+						<div class="col-xs-10 address-right">
+							<h5>Visit Us</h5>
+							<p>Computer Center, MIT, Anna University</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="address-row w3-agileits">
+						<div class="col-xs-2 address-left">
+							<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+						</div>
+						<div class="col-xs-10 address-right">
+							<h5>Mail Us</h5>
+							<p><a href="mailto:info@example.com"> chairman@csmit.org</a></p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="address-row">
+						<div class="col-xs-2 address-left">
+							<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+						</div>
+						<div class="col-xs-10 address-right">
+							<h5>Call Us</h5>
+							<p>+91 84898 11104</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>  
+					<!-- map -->
+					<div class="map agileits">
+						 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.3521056505074!2d80.13856751381496!3d12.9493064908705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525fac595c29ff%3A0xb76082ae18b51418!2sMadras+Institute+of+Technology!5e0!3m2!1sen!2sin!4v1468341764904"></iframe>
+
+
+					</div>
+					<!-- //map --> 
+				</div>
+				<div class="clearfix"> </div>
+			</div>	
+		</div>	
+	</div>
+	<!-- //contact --> 
+	
+	<!-- copy rights start here -->
+	<div class="copyw3-agile">
+		<div class="container"> 
+			<div class="w3social-icons footer-w3icons"> 
+				<ul>
+					<li><a href="https://www.facebook.com/carteblanche.csmit/"><i class="fa fa-facebook"></i></a></li>
+				</ul>
+			</div>
+			<p>© 2018 CSMIT. All Rights Reserved | Design by  <span title=" Shiva Kumar, Bently Nixon, Sridharan"> CSMIT WebTeam</span></p>
+		</div>
+	</div>
+	<!-- //copy right end here --> 
+	<!-- modal -->
+	<div class="modal about-modal w3-agileits fade" id="myModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+				</div> 
+				<div class="modal-body">
+					<img src="images/img2.jpg" alt=""> 
+					<h5>Cras rutrum iaculis enim</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum iaculis enim, non convallis felis mattis at. Donec fringilla lacus eu pretium rutrum. Cras aliquet congue ullamcorper. Etiam mattis eros eu ullamcorper volutpat. Proin ut dui a urna efficitur varius. uisque molestie cursus mi et congue consectetur adipiscing elit cras rutrum iaculis enim, Lorem ipsum dolor sit amet, non convallis felis mattis at. Maecenas sodales tortor ac ligula ultrices dictum et quis urna. Etiam pulvinar metus neque, eget porttitor massa vulputate. </p>
+				</div> 
+			</div>
+		</div>
+	</div>
+	<!-- //modal -->
+	<!-- modal -->
+	<div class="modal about-modal w3-agileits fade" id="myModal2" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+				</div> 
+				<div class="modal-body login-page "><!-- login-page -->      
+					<div class="sap_tabs">
+						<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+							<ul class="resp-tabs-list">
+								<li class="resp-tab-item" aria-controls="tab_item-0"><span>Login</span></li>
+								<li class="resp-tab-item" aria-controls="tab_item-1"><span>Register</span></li> 
+							</ul>	 
+							<div class="clearfix"> </div>	
+							<div class="resp-tabs-container">
+								<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+									<div class="agileits-login">
+										<form action="loginuser.php" method="post">
+											<input type="email" id="useremail" class="email" name="Email" placeholder="Email" required=""/>
+											<input type="password" class="password" name="Password" placeholder="Password" required=""/>
+											<div class="wthree-text"> 
+												<ul> 
+													<li>
+														 
+													</li>
+													<li> <a href="forgot.php?email=" id="forgotlink" onclick="return validateemail()">Forgot password?</a> </li>
+												</ul>
+												<div class="clearfix"> </div>
+											</div>  
+											<div class="w3ls-submit"> 
+												<input type="submit" value="LOGIN">  	
+											</div>	
+										</form>
+									</div> 
+								</div>
+								<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
+									<div class="login-top sign-top">
+										<div class="agileits-login">
+											<form action="registeruser.php" method="post">
+											<font color="white">
+												<input type="text" name="Firstname" placeholder="Firstname" required="">
+												<input type="text" name="Lastname" placeholder="Lastname" required="">
+												<input type="radio" name="Gender" value="Male"> Male  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  												<input type="radio" name="Gender" value="Female"> Female  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  												<input type="radio" name="Gender" value="Other"> Other<br><br>
+  												<input type="text" name="College" placeholder="College" required="">
+  												<input type="radio" name="Year" value="First"> First &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  												<input type="radio" name="Year" value="Second"> Second &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  												<input type="radio" name="Year" value="Third"> Third &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+   												<input type="radio" name="Year" value="Final"> Final<br><br>
+												<input type="text" name="Department" placeholder="Department" required="">
+												<input type="radio" name="Degree" value="Bachelors"> Bachelors &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  												<input type="radio" name="Degree" value="Masters"> Masters &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  												<input type="radio" name="Degree" value="Doctorate"> Doctorate <br><br>
+  												<input type="text" name="Contact" placeholder="Contact" required="">
+												<input type="email" id="ab" class="email" name="Email" placeholder="Email" required=""/>
+												<input type="password" class="password" name="Password" placeholder="Password" required=""/>	
+												<input type="password" class="password" name="Confirmpassword" placeholder="Confirm Password" required=""/>	
+											<!--	<label class="anim">
+													<input type="checkbox" class="checkbox">
+													<span> I accept the terms of use</span> 
+												</label> -->
+												<div class="w3ls-submit"> 
+													<input class="register" type="submit" value="REGISTER NOW">  <br><br>
+													<center><a href="http://www.uniqtechnologies.co.in/" target="_blank"><img border="0"  src="spon5.png" style="margin: 1.5%;" width="150px"></a></center><Br><br>
+												</div>
+											</font>
+											</form> 
+										</div>  
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div class="clearfix"> </div>
+					</div>   
+				</div> <!-- //login-page -->
+			</div>
+		</div>
+	</div>
+	<!-- //modal -->  		 
+	<!-- fireworks scripts --
+	<script type="text/javascript" src="js/jquery.fireworks.js"></script>-->
+	<script>	
+		setTimeout(function() {
+			$('.w3-agilefireworks').fireworks();   
+		});
+	</script>
+	<!-- //fireworks scripts -->
+	<!-- timer scripts --> 
+	<script type="text/javascript" src=" js/moment.js"></script>
+	<script type="text/javascript" src=" js/moment-timezone-with-data.js"></script>
+	<script type="text/javascript" src="js/timer.js"></script>
+	<!-- //scripts -->  
+	<!-- jarallax -->
+	<script src="js/jarallax.js"></script>
+	<script src="js/SmoothScroll.min.js"></script>
+	<script type="text/javascript">
+		/* init Jarallax */
+		$('.jarallax').jarallax({
+			speed: 0.5,
+			imgWidth: 1366,
+			imgHeight: 768
+		})
+	</script>
+	<!-- //jarallax --> 
+	<!-- ResponsiveTabs js -->
+	<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#horizontalTab').easyResponsiveTabs({
+				type: 'default', //Types: default, vertical, accordion           
+				width: 'auto', //auto or any width like 600px
+				fit: true   // 100% fit in a container
+			});
+		});
+	</script>
+	<!-- //ResponsiveTabs js --> 
+	<!-- Scrolling Nav JavaScript --> 
+    <script src="js/scrolling-nav.js"></script>  
+	<!-- //fixed-scroll-nav-js --> 
+	<!-- pop-up-box -->    
+	<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+	<script>
+		$(document).ready(function() {
+		$('.popup-with-zoom-anim').magnificPopup({
+			type: 'inline',
+			fixedContentPos: false,
+			fixedBgPos: true,
+			overflowY: 'auto',
+			closeBtnInside: true,
+			preloader: false,
+			midClick: true,
+			removalDelay: 300,
+			mainClass: 'my-mfp-zoom-in'
+		});
+																		
+		});
+	</script> 
+	<!-- //pop-up-box -->
+	<!-- start-smooth-scrolling --> 
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>	
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+			
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+			
+			function validateemail()
+			{
+				var textval = document.getElementById("useremail").value;
+				if(textval.match(/\S/))
+				{
+					document.getElementById("forgotlink").href=document.getElementById("forgotlink").href+textval;
+					return true;
+				}
+				else
+				{
+					alert('Please enter your email id');
+					return false;
+				}
+			}
+	</script>
+	<!-- //end-smooth-scrolling -->	 
+	<!-- smooth-scrolling-of-move-up -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+			};
+			*/
+			
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			
+		});
+	</script>
+	<!-- //smooth-scrolling-of-move-up -->
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

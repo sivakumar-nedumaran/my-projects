@@ -1,0 +1,1470 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+ <!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom CSS -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- Graph CSS -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- jQuery -->
+<!-- lined-icons -->
+<link rel="stylesheet" href="css/icon-font.css" type='text/css' />
+<!-- //lined-icons -->
+ <!-- Meters graphs -->
+<script src="js/jquery-2.1.4.js"></script>
+<script>
+document.getElementsByTagName("body")[0].style.cursor = "url(hp_cursor.cur), auto";
+</script>
+</head> 
+    	 <!-- /w3layouts-agile -->
+ <body class="sticky-header left-side-collapsed"  onload="initMap()">
+    <section>
+     <!-- app --> 
+			<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>Onsite Programming Contest</h3>
+							An event for those insomniac coders!
+							<h4>Rules</h4>
+							<ul>
+							<li>Each team comprises a maximum of two members.</li>
+							<li>Members of the team shall not necessarily be from the same college.</li>
+							<li>Prelims (paper based) - Basic knowledge on programming will be tested.</li>
+							<li>The final round will be coding round for a duration of 1.5 hrs</li>
+							<li>The contestants can code in any programming language of their choice.</li>
+							<li>Any case of discussing strategy or code plagiarism will disqualify the team.</li>
+							</ul>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/a1.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+			<!-- app-->
+			<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>Hack Knight</h3>
+							Are you one of those sneaky hackers interested in security and ethical hacking? This event is for you!
+							<h4>Rules</h4>
+							<ul>
+							<li>Each team comprises a maximum of two members.</li>
+							<li>Members of the team shall not necessarily be from the same college.</li>
+							<li>Prelims (paper based) - Basic knowledge on hacking and security will be tested.</li>
+							<li>The final round will be application oriented.</li>
+							<li>The contestants will be given real life scenarios and will asked about how you can make it more secure.</li>
+							</ul>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/a2.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+						<!-- app-->
+			<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>Inscribed</h3>
+							An event for those drenched in database systems, data structures, operating systems and computer networks.
+							<h4>Rules</h4>
+							<ul>
+							<li>Each team comprises a maximum of two members.</li>
+							<li>Members of the team shall not necessarily be from the same college.</li>
+							<li>Prelims will be paper based, consisting of 30 MCQs for a duration of 40 min.</li>
+							<li>In the final round, participants will be asked to write code snippets, to debug, to predict the output or to answer conceptual questions.</li>
+							<li>Any case of discussing strategy or malpractice will disqualify the team.</li>
+							</ul>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/a3.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+			<!-- app-->
+			<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>Sudo shell</h3>
+							An event for those born for Linux and live in terminals.
+							<h4>Rules</h4>
+							<ul>
+							<li>Each team comprises a maximum of two members.</li>
+							<li>Members of the team shall not necessarily be from the same college.</li>
+							<li>Prelims will be paper based, consisting of 25 MCQs for a duration of 40 min.</li>
+							<li>In the final round, participants will be asked to solve the given questions using Linux commands on terminal.</li>
+							<li>Any case of discussing strategy or malpractice will disqualify the team.</li>
+							</ul>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/a4.png" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+			<!-- app-->
+			<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>Street coding</h3>
+							An event for coders who can find their inner peace amongst diverting quarrels and loud EDM!
+							<h4>Rules</h4>
+							<ul>
+							<li>Each team comprises a maximum of two members.</li>
+							<li>Members of the team shall not necessarily be from the same college.</li>
+							<li>Prelims will be paper based, consisting of 25 MCQs for a duration of 40 min.</li>
+							<li>In the final round, participants will be asked to code on the streets among distractions and loud music.</li>
+							<li>Participants may be given tasks for divertion while they are coding during the final round .</li>
+							<li>Any case of discussing strategy or malpractice will disqualify the team.</li>
+							</ul>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/a5.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+			<!-- app-->
+			<div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>Debugging</h3>
+							An event for those programming nazis and bug busters.
+							<h4>Rules</h4>
+							<ul>
+							<li>Each team comprises a maximum of two members.</li>
+							<li>Members of the team shall not necessarily be from the same college.</li>
+							<li>Prelims will be paper based, consisting of 25 MCQs for a duration of 1 hr.</li>
+							<li>In the final round, participants will given a complete code and their task is to find errors and rectify them.</li>
+							<li>Any case of discussing strategy or malpractice will disqualify the team.</li>
+							</ul>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/a6.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+			<!-- app-->
+			<div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>Enter the Snapdrag</h3>
+							You are a digital freak then this is it. With IOT and AI ruling the world, time to shift gears to Digital logic.
+							<h4>Rules</h4>
+							<ul>
+							<li>Each team comprises a maximum of two members.</li>
+							<li>Members of the team shall not necessarily be from the same college.</li>
+							<li>Prelims - Basic knowledge will be tested.</li>
+							<li>The final round will be a face to face interview on Digital electronics.</li>
+							</ul>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/e1.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+			<!-- app-->
+			<div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>Mu dot into</h3>
+							Embed yourself into the processors. From Intel to Qualcomm, Mediatek to Exynos, Processors play a vital role. If Microprocessors, Embedded Systems fascinate you then Mu dot will be a piece of cake.
+							<h4>Rules</h4>
+							<ul>
+							<li>Each team comprises a maximum of two members.</li>
+							<li>Members of the team shall not necessarily be from the same college.</li>
+							<li>Prelims - Basic knowledge will be tested.</li>
+							<li>2nd round - WIll test your knowledge in Arduino.</li>
+							<li>The final round will be a face to face interview.</li>
+							</ul>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/e2.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+			<!-- app-->
+			<div class="modal fade" id="myModal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>Nodes & Paths</h3>
+							All roads lead to Rome, but do they? Time to put on your thinking caps on and decipher the course of your circuit. Be sure to think out of the box, or should I say out of the path?
+							<h4>Rules</h4>
+							<ul>
+							<li>Each team comprises a maximum of two members.</li>
+							<li>Members of the team shall not necessarily be from the same college.</li>
+							<li>Prelims - Basic knowledge will be tested.</li>
+							<li>2nd round - WIll test your knowledge in LT Spice - EC lab.</li>
+							<li>The final round will be a face to face interview.</li>
+							</ul>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/e3.png" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+			<!-- app-->
+			<div class="modal fade" id="myModal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>Network Titans</h3>
+							We use silicon to make engineering simple. Routers are our traffic cops,  We don't wear helmets in front of them. If networking is your interest then this might be your cup of tea.
+							<h4>Rules</h4>
+							<ul>
+							<li>Each team comprises a maximum of two members.</li>
+							<li>Members of the team shall not necessarily be from the same college.</li>
+							<li>Prelims - Basic knowledge will be tested.</li>
+							<li>2nd round - WIll test your knowledge in Networks.</li>
+							<li>The final round will be a face to face interview.</li>
+							</ul>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/e4.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+			<!-- app-->
+			<div class="modal fade" id="myModal11" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>Mind about Signals</h3>
+							We look for signals everwhere, from the cosmos, from that pretty crush, from the transmitter that just wont work! Come on in to see how good you are with the waves. Stll thinking about your crush, aren't you?
+							<h4>Rules</h4>
+							<ul>
+							<li>Each team comprises a maximum of two members.</li>
+							<li>Members of the team shall not necessarily be from the same college.</li>
+							<li>Prelims - Basic knowledge will be tested.</li>
+							<li>2nd round - WIll test your knowledge in DSP lab.</li>
+							<li>The final round will be a face to face interview.</li>
+							</ul>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/e5.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+			<!-- app-->
+			<div class="modal fade" id="myModal12" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>Automate & control</h3>
+							When the chips are down everything becomes a chaos.  Its time for Instrumentation and control Engineers to prove Joker wrong.
+							<h4>Rules</h4>
+							<ul>
+							<li>Each team comprises a maximum of two members.</li>
+							<li>Members of the team shall not necessarily be from the same college.</li>
+							<li>Prelims - Basic knowledge will be tested.</li>
+							<li>2nd round - There will be a surprise final round.</li>
+							<li>The final round will be a face to face interview.</li>
+							</ul>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/e6.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+			<!-- app-->
+			<div class="modal fade" id="myModal13" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>Mech quiz</h3>
+							With examinations primarily testing our memory, are you looking forward to test your knowledge, well, in a fun way? We have exactly what you need – a technical quiz, solely focussing on mechanical stream.
+							<h4>Rules</h4>
+							<ul>
+							<li>Maximum of 3 per team.</li>
+							<li>Teams need not necessarily have its members from the same discipline, or even the same college.</li>
+							<li>Browsing is not allowed.</li>
+							</ul>
+							<h4>Format</h4>
+							<ul>
+							<li>Prelims – written test – will feature about 15-25 questions.</li>
+							<li>Finale – will comprise sub-rounds.</li>
+							</ul>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/m1.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+			<!-- app-->
+			<div class="modal fade" id="myModal14" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>CAD modelling</h3>
+							Modeling is equal parts math, geometry and design. If you are good at these, feel free to stop by our
+event and show your talent.
+							<h4>Rules</h4>
+							<ul>
+							<li>Maximum of 2 per team</li>
+							<li>Teams need not necessarily have its members from the same discipline, or even the same college</li>
+							</ul>
+							<h4>Format</h4>
+							<ul>
+							<li>Prelims: written test with about 25 questions from basics of designing.</li>
+							<li>Finals: participants will be asked to develop a model of the given component using the CAD
+software. Reference diagram for components will be provided.</li>
+							</ul>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/m2.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+			<!-- app-->
+			<div class="modal fade" id="myModal15" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>Plan it</h3>
+							Given an objective, you are expected to plan the process - can be production sequence, cost estimation, budgeting, product design etc.
+							<h4>Rules</h4>
+							<ul>
+							<li>Maximum of 3 per team.</li>
+							<li>Teams need not necessarily have its members from the same discipline, or even the same college.</li>
+							<li>Judges’ decision will be final.</li>
+							</ul>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/m3.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+			<!-- app-->
+			<div class="modal fade" id="myModal16" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>Debacle diving</h3>
+							“A problem is a problem until you get to the root of the problem”<br>
+You will be presented with some fiasco (can be hypothetical) in mechanical field and you have to
+find the cause of the problem and also come up with a solution to the problem.
+							<h4>Rules</h4>
+							<ul>
+							<li>1 or 2 per team</li>
+							<li>Teams need not necessarily have its members from the same discipline, or even the same college</li>
+							<li>Judges’ decision will be final</li>
+							</ul>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/m4.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+			<!-- app-->
+			<div class="modal fade" id="myModal17" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>Idea Presentation</h3>
+							“Daring ideas are like chessmen moved forward. They may be beaten, but they may start a winning
+game”<br>
+Carte Blanche provides you a platform to present your innovative ideas which can potentially make
+way for a brighter future.
+							<h4>Rules</h4>
+							<ul>
+							<li>Maximum of 3 per team.</li>
+							<li>Teams need not necessarily have its members from the same discipline, or even the same college.</li>
+							<li>The presentation should last a maximum of 7 minutes, which will be followed by a question session.</li>
+							<li>Teams have to mail us an abstract of the Idea beforehand.</li>
+							<li>Judges’ decision will be final.</li>
+							</ul>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/m5.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+			<!-- app-->
+			<div class="modal fade" id="myModal18" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>How stuff works</h3>
+							“Without a good question, a good answer has no place to go”<br>
+We have the “good questions” – questioning the things happening around us – that could kindle
+one’s curiosity. Do you have the “good answers” to it?
+							<h4>Rules</h4>
+							<ul>
+							<li>1 or 2 per team</li>
+							<li>Teams need not necessarily have its members from the same discipline, or even the same college.</li>
+							<li>Browsing is not allowed.</li>
+							</ul>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/m6.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+						<!-- app-->
+			<div class="modal fade" id="myModal19" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>Treasure Hunt</h3>
+							<h4>Rules</h4>
+							<ul>
+							<li>2 or 3 per team. Lonewoves are also welcome.</li>
+							<li>Discussing with other teams will lead to immediate DQ.</li>
+							<li>Make sure each team has a mobile phone with internet (preferrably 4G).</li>
+							<li>Round 1 is a written round with aptitude and logical reasoning questions.</li>
+							<li>The teams selected to round 2 will play the treasure hunt which involves finding clues and decrypting them to find the locations in the campus.</li>
+							</ul>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/nt1.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+      					<!-- app-->
+			<div class="modal fade" id="myModal20" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>Gaming</h3>
+							<h4>Rules</h4>
+							<ul>
+							<li><a href="fifa.pdf" target="_blank">FIFA Rules</a></li>
+							<li><a href="counter.pdf" target="_blank">Counter Strike Rules</a></li>
+							<li><a href="nfs.pdf" target="_blank">Need For Speed Most Wanted Rules</a></li>
+							</ul>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/nt2.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+								<!-- app-->
+			<div class="modal fade" id="myModal21" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>Quiz</h3>
+							<h4>Rules</h4>
+							<ul>
+							<li>2 or 3 per team. Lonewolves are also welcome.</li>
+							<li>Questions are from various themes like sci-tech, movies, current affairs.</li>
+							<li>This event has two rounds . Format will be explained on the spot.</li>
+							<li>Surfing or doing any malpractice will lead to immediate DQ. </li>
+							</ul>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/nt3.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+								<!-- app-->
+			<div class="modal fade" id="myModal22" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>Mr. Wordsmith</h3>
+							<h4>Rules</h4>
+							<ul>
+							<li>2 per team</li>
+							<li>Round 1 consists of verbal aptitude questions.</li>
+							<li>Round 2 is similar to 'Oru varthai oru latcham' game show.</li>
+							</ul>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/nt4.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+								<!-- app-->
+			<div class="modal fade" id="myModal23" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>IPL Auction</h3>
+							<h4>Rules</h4>
+							<ul>
+							<li>Each team can have 2-3 members in the group.</li>
+							<li>Prelims is entirely focused on your knowledge about the game. It contains questions from International and IPL cricket matches. Based on your performance in this round, top 8 teams will move to Round 2.</li>
+							<p>Finals</p>
+							<li>Teams will be given equal amount of virtual money for the competition.</li>
+							<li>Teams will have to form a team of 11 players.</li>
+							<li>Each team formed must include 6 batsmen(including a wicket keeper), 4 bowlers & 1 all-rounder.</li>
+							<li>A team can only buy 4 foreign players to its set of 11 players.</li>
+							<li>Each player that will be auctioned contain a rating point.</li>
+							<li>The team with maximum total of rating points will be considered as winner.</li>
+							<li>If a team is drowned out of money before the formation of its 11 players, the team will be disqualified.</li>
+							<li>In case of a tie for winning position, the team with more money left will get the advantage.</li>
+							</ul>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/nt5.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+								<!-- app-->
+			<div class="modal fade" id="myModal24" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>How stuff works</h3>
+							<h4>Rules</h4>
+							<ul>
+							<li>2 per team</li>
+							<li>This event has two rounds.</li>
+							<li>Round 1 will be a written round with questions involving the basic scientific concepts behind commonly known phenomena.</li>
+							<li>Format of round 2 will be explained on the spot.</li>
+							<li>Surfing or doing any malpractice will lead to immediate DQ.</li>
+							</ul>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/nt6.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+								<!-- app-->
+			<div class="modal fade" id="myModal25" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>Line Replica</h3>
+							<h4>Rules</h4>
+							<a href="r1.pdf" target="_blank">Click to download</a>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/r1.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+											<!-- app-->
+			<div class="modal fade" id="myModal26" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>All Terrain</h3>
+							<h4>Rules</h4>
+							<a href="r2.pdf" target="_blank">Click to download</a>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/r2.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+											<!-- app-->
+			<div class="modal fade" id="myModal27" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>Robo Race</h3>
+							<h4>Rules</h4>
+							<a href="r3.pdf" target="_blank">Click to download</a>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/r3.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+											<!-- app-->
+			<div class="modal fade" id="myModal28" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>Sort Bot</h3>
+							<h4>Rules</h4>
+							<a href="r4.pdf" target="_blank">Click to download</a>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/r4.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+											<!-- app-->
+			<div class="modal fade" id="myModal29" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>Robo War</h3>
+							<h4>Rules</h4>
+							<a href="r5.pdf" target="_blank">Click to download</a>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/r5.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+											<!-- app-->
+			<div class="modal fade" id="myModal30" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog facebook" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body">
+							<div class="app-grids">
+								<div class="app">
+						<div class="col-md-5 app-left mpl">
+							<h3>Maze Solver</h3>
+							<h4>Rules</h4>
+							<a href="r6.pdf" target="_blank">Click to download</a>
+							<div class="app-devices">
+								<h5>Register now!</h5>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="col-md-7 app-image">
+							<img src="images/r6.jpg" height="300" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //app-->
+			<div id="page-wrapper">
+				<div class="inner-content">
+				      <div class="music-browse">
+					<!--albums-->
+					<!-- pop-up-box --> 
+							<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all">
+							<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+							 <script>
+									$(document).ready(function() {
+									$('.popup-with-zoom-anim').magnificPopup({
+										type: 'inline',
+										fixedContentPos: false,
+										fixedBgPos: true,
+										overflowY: 'auto',
+										closeBtnInside: true,
+										preloader: false,
+										midClick: true,
+										removalDelay: 300,
+										mainClass: 'my-mfp-zoom-in'
+									});
+									});
+							</script>		
+					<!--//pop-up-box -->
+					<marquee><h3><a href="schedule.html"><font color="black">Click to view event schedule </font></a><img id="blinker" src="images/new.png" width="40"> </h3></marquee>
+						<div class="browse">
+								<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+								  <ul id="myTab" class="nav nav-tabs" role="tablist">
+								  
+								   <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Algo</a></li>
+								   <li role="presentation" class=""><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Elex</a></li>
+								   <li role="presentation" class=""><a href="#home1" id="home-tab1" role="tab" data-toggle="tab" aria-controls="home1" aria-expanded="false">Mech</a></li>
+								   <li role="presentation" class=""><a href="#profile1" role="tab" id="profile-tab1" data-toggle="tab" aria-controls="profile1" aria-expanded="false">Non-technical</a></li>
+								   <li role="presentation" class=""><a href="#profile2" role="tab" id="profile-tab2" data-toggle="tab" aria-controls="profile2" aria-expanded="false">Robotics</a></li>
+								    
+								</ul>
+								<div id="myTabContent" class="tab-content">
+								  <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
+									<div class="browse-inner">
+								 	 <!-- /agileits -->
+		
+									<div class="col-md-3 artist-grid">
+										<a  href="#" href="#" data-toggle="modal" data-target="#myModal1"><img src="images/a1.jpg" height="180" title="allbum-name"></a>
+										 <a href="#" href="#" data-toggle="modal" data-target="#myModal1"></a>
+												<a class="art" href="#" data-toggle="modal" data-target="#myModal1">OSPC</a>
+										</div>
+									<div class="col-md-3 artist-grid">
+											<a  href="# " data-toggle="modal" data-target="#myModal2"><img src="images/a2.jpg" height="180"  title="allbum-name"></a>
+											 <a href="#" data-toggle="modal" data-target="#myModal2"></a>
+												<a class="art" href="#" data-toggle="modal" data-target="#myModal2">Hack Knight</a>
+										</div>
+									<div class="col-md-3 artist-grid">
+											<a  href="#" href="#" data-toggle="modal" data-target="#myModal3"><img src="images/a3.jpg"  height="180" title="allbum-name"></a>
+											 <a href="#" href="#" data-toggle="modal" data-target="#myModal3"></a>
+												<a class="art" href="#" href="#" data-toggle="modal" data-target="#myModal3">Inscribed</a>
+										</div>
+									<div class="col-md-3 artist-grid">
+											<a  href="#" href="#" data-toggle="modal" data-target="#myModal4"><img src="images/a4.png"  height="180" title="allbum-name"></a>
+											 <a href="#"href="#" data-toggle="modal" data-target="#myModal4"></i></a>
+												<a class="art" href="#" href="#" data-toggle="modal" data-target="#myModal4">Sudo shell</a>
+										</div>
+									<div class="col-md-3 artist-grid">
+											<a  href="#" href="#" data-toggle="modal" data-target="#myModal5"><img src="images/a5.jpg"  height="180" title="allbum-name"></a>
+											 <a href="#" href="#" data-toggle="modal" data-target="#myModal5"></a>
+												<a class="art" href="#" href="#" data-toggle="modal" data-target="#myModal5">Street coding</a>
+										</div>
+										<div class="col-md-3 artist-grid">
+											<a  href="#" href="#" data-toggle="modal" data-target="#myModal6"><img src="images/a6.jpg"  height="180" title="allbum-name"></a>
+											 <a href="#" href="#" data-toggle="modal" data-target="#myModal6"></a>
+											<a class="art" href="#" href="#" data-toggle="modal" data-target="#myModal6">Debugging</a>
+										</div>
+										</div>
+								  </div>
+								  <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+									   <div class="browse-inner">
+								<div class="col-md-3 artist-grid">
+											<a  href="#" data-toggle="modal" data-target="#myModal7"><img src="images/e1.jpg"  height="180" title="allbum-name"></a>
+											 <a href="#" data-toggle="modal" data-target="#myModal7"></a>
+												<a class="art" href="#" data-toggle="modal" data-target="#myModal7">Enter the Snapdrag</a>
+										</div>
+									<div class="col-md-3 artist-grid">
+											<a  href="#" data-toggle="modal" data-target="#myModal8"><img src="images/e2.jpg"  height="180" title="allbum-name"></a>
+											 <a href="#" data-toggle="modal" data-target="#myModal8"></a>
+												<a class="art" href="#" data-toggle="modal" data-target="#myModal8">Mu dot Into</a>
+										</div>
+										<div class="col-md-3 artist-grid">
+											<a  href="#" data-toggle="modal" data-target="#myModal9"><img src="images/e3.png"  height="180" title="allbum-name"></a>
+											 <a href="#" data-toggle="modal" data-target="#myModal9"></a>
+												<a class="art" href="#" data-toggle="modal" data-target="#myModal9">Nodes & Paths</a>
+										</div>
+									<div class="col-md-3 artist-grid">
+										<a  href="#" data-toggle="modal" data-target="#myModal10"><img src="images/e4.jpg"  height="180" title="allbum-name"></a>
+										 <a href="#" data-toggle="modal" data-target="#myModal10"></a>
+											<a class="art" href="#" data-toggle="modal" data-target="#myModal10">Network Titans</a>
+									</div>
+								<div class="col-md-3 artist-grid">
+									<a  href="#" data-toggle="modal" data-target="#myModal11"><img src="images/e5.jpg" height="180"  title="allbum-name"></a>
+									 <a href="#" data-toggle="modal" data-target="#myModal11"></a>
+									<a class="art" href="#" data-toggle="modal" data-target="#myModal11">Mind about Signals</a>
+								</div>
+							<div class="col-md-3 artist-grid">
+									<a  href="#" data-toggle="modal" data-target="#myModal12"><img src="images/e6.jpg"  height="180"  title="allbum-name"></a>
+									 <a href="#" data-toggle="modal" data-target="#myModal12"></a>
+										<a class="art" href="#" data-toggle="modal" data-target="#myModal12">Automate & Control</a>
+								</div>
+								</div>
+								  </div>
+								  <div role="tabpanel" class="tab-pane fade" id="home1" aria-labelledby="home-tab1">
+									 <div class="browse-inner">
+								
+								<div class="col-md-3 artist-grid">
+												<a  href="#" data-toggle="modal" data-target="#myModal13"><img src="images/m1.jpg"  height="180"  title="allbum-name"></a>
+												 <a href="#" data-toggle="modal" data-target="#myModal13"></a>
+													<a class="art" href="#" data-toggle="modal" data-target="#myModal13">Mech quiz</a>
+											</div>
+										<div class="col-md-3 artist-grid">
+												<a  href="#" data-toggle="modal" data-target="#myModal14"><img src="images/m2.jpg"  height="180" title="allbum-name"></a>
+												 <a href="#" data-toggle="modal" data-target="#myModal14"></a>
+												<a class="art" href="#" data-toggle="modal" data-target="#myModal14">CAD modelling</a>
+													</div>
+														<div class="col-md-3 artist-grid">
+																<a  href="#" data-toggle="modal" data-target="#myModal15"><img src="images/m3.jpg"  height="180" title="allbum-name"></a>
+																 <a href="#" data-toggle="modal" data-target="#myModal15"></a>
+																	<a class="art" href="#" data-toggle="modal" data-target="#myModal15">Plan it</a>
+															</div>
+														<div class="col-md-3 artist-grid">
+																<a  href="#" data-toggle="modal" data-target="#myModal16"><img src="images/m4.jpg"  height="180"  title="allbum-name"></a>
+																 <a href="#" data-toggle="modal" data-target="#myModal16"></a>
+																	<a class="art" href="#" data-toggle="modal" data-target="#myModal16">Debacle diving</a>
+															</div>
+															<div class="col-md-3 artist-grid">
+																<a  href="#" data-toggle="modal" data-target="#myModal17"><img src="images/m5.jpg"  height="180" title="allbum-name"></a>
+																 <a href="#" data-toggle="modal" data-target="#myModal17"></a>
+																	<a class="art" href="#" data-toggle="modal" data-target="#myModal17">Idea presentation</a>
+															</div>
+														<div class="col-md-3 artist-grid">
+															<a  href="#" data-toggle="modal" data-target="#myModal18"><img src="images/m6.jpg"  height="180" title="allbum-name"></a>
+															 <a href="#" data-toggle="modal" data-target="#myModal18"></a>
+																<a class="art" href="#" data-toggle="modal" data-target="#myModal18">How stuff works</a>
+														</div>
+										
+													</div>
+								  </div>
+								  <div role="tabpanel" class="tab-pane fade" id="profile2" aria-labelledby="profile-tab2">
+									 <div class="browse-inner">
+								
+								<div class="col-md-3 artist-grid">
+												<a  href="#" data-toggle="modal" data-target="#myModal25"><img src="images/r1.jpg"  height="180"  title="allbum-name"></a>
+												 <a href="#" data-toggle="modal" data-target="#myModal25"></a>
+													<a class="art" href="#" data-toggle="modal" data-target="#myModal25">Line Replica</a>
+											</div>
+										<div class="col-md-3 artist-grid">
+												<a  href="#" data-toggle="modal" data-target="#myModal26"><img src="images/r2.jpg"  height="180" title="allbum-name"></a>
+												 <a href="#" data-toggle="modal" data-target="#myModal26"></a>
+												<a class="art" href="#" data-toggle="modal" data-target="#myModal26">All Terrain</a>
+													</div>
+														<div class="col-md-3 artist-grid">
+																<a  href="#" data-toggle="modal" data-target="#myModal27"><img src="images/r3.jpg"  height="180" title="allbum-name"></a>
+																 <a href="#" data-toggle="modal" data-target="#myModal27"></a>
+																	<a class="art" href="#" data-toggle="modal" data-target="#myModal27">Robo Race</a>
+															</div>
+														<div class="col-md-3 artist-grid">
+																<a  href="#" data-toggle="modal" data-target="#myModal28"><img src="images/r4.jpg"  height="180"  title="allbum-name"></a>
+																 <a href="#" data-toggle="modal" data-target="#myModal28"></a>
+																	<a class="art" href="#" data-toggle="modal" data-target="#myModal28">Sort Bot</a>
+															</div>
+															<div class="col-md-3 artist-grid">
+																<a  href="#" data-toggle="modal" data-target="#myModal29"><img src="images/r5.jpg"  height="180" title="allbum-name"></a>
+																 <a href="#" data-toggle="modal" data-target="#myModal29"></a>
+																	<a class="art" href="#" data-toggle="modal" data-target="#myModal29">Robo War</a>
+															</div>
+														<div class="col-md-3 artist-grid">
+															<a  href="#" data-toggle="modal" data-target="#myModal30"><img src="images/r6.jpg"  height="180" title="allbum-name"></a>
+															 <a href="#" data-toggle="modal" data-target="#myModal30"></a>
+																<a class="art" href="#" data-toggle="modal" data-target="#myModal30">Maze Solver</a>
+														</div>
+										
+													</div>
+								  </div>
+								   <div role="tabpanel" class="tab-pane fade" id="profile1" aria-labelledby="profile-tab1">
+									  <div class="browse-inner">
+								
+								
+										<div class="col-md-3 artist-grid">
+											<a  href="#" data-toggle="modal" data-target="#myModal19"><img src="images/nt1.jpg"  height="180" title="allbum-name"></a>
+											 <a href="#" data-toggle="modal" data-target="#myModal19"></a>
+													<a class="art" href="#" data-toggle="modal" data-target="#myModal19">Treasure hunt</a>
+											</div>
+										<div class="col-md-3 artist-grid">
+												<a  href="#" data-toggle="modal" data-target="#myModal20"><img src="images/nt2.jpg"  height="180" title="allbum-name"></a>
+												 <a href="#" data-toggle="modal" data-target="#myModal20"></a>
+													<a class="art" href="#" data-toggle="modal" data-target="#myModal20">Gaming</a>
+											</div>
+										<div class="col-md-3 artist-grid">
+												<a  href="#" data-toggle="modal" data-target="#myModal21"><img src="images/nt3.jpg"  height="180" title="allbum-name"></a>
+												 <a href="#" data-toggle="modal" data-target="#myModal21"></a>
+													<a class="art" href="#" data-toggle="modal" data-target="#myModal21">Quiz</a>
+											</div>
+										<div class="col-md-3 artist-grid">
+												<a  href="#" data-toggle="modal" data-target="#myModal22"><img src="images/nt4.jpg"  height="180" title="allbum-name"></a>
+												 <a href="#" data-toggle="modal" data-target="#myModal22"></a>
+													<a class="art" href="#" data-toggle="modal" data-target="#myModal22">Game of words</a>
+											</div>
+										<div class="col-md-3 artist-grid">
+												<a  href="#" data-toggle="modal" data-target="#myModal23"><img src="images/nt5.jpg"  height="180" title="allbum-name"></a>
+												 <a href="#"data-toggle="modal" data-target="#myModal23"></a>
+													<a class="art" href="#" data-toggle="modal" data-target="#myModal23">IPL auction</a>
+											</div>
+											<div class="col-md-3 artist-grid">
+												<a  href="# " data-toggle="modal" data-target="#myModal24"><img src="images/nt6.jpg"  height="180" title="allbum-name"></a>
+												 <a href="#" data-toggle="modal" data-target="#myModal24"></a>
+												<a class="art" href="#" data-toggle="modal" data-target="#myModal24">How stuff works</a>
+											</div>
+													</div>
+											</div>
+								</div>
+							</div>
+						 	 <!-- /agileinfo -->
+						</div>
+					<!--//End-albums-->
+					
+						<!--//discover-view-->
+
+								<!--//discover-view-->
+							<!--//music-left-->
+							</div>
+						<!--body wrapper start-->
+						
+						<div class="review-slider">
+								<div class="tittle-head">
+									<h3 class="tittle">Online Events <span class="new"> New</span></h3>
+									<div class="clearfix"> </div>
+								</div>
+								 <ul id="flexiselDemo1">
+								<li>
+									<a href="#"><img src="images/o4.jpg"  height="200" alt=""/></a>
+									<div class="slide-title"><h4>Math-o-mania</div>
+									<div class="date-city">
+										<h5>Yet to schedule</h5>
+										<div class="buy-tickets">
+											<a href="#">Start Contest</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="#"><img src="images/o8.jpg"  height="200" alt=""/></a>
+									<div class="slide-title"><h4>OLPC</h4></div>
+									<div class="date-city">
+										<h5>Yet to schedule</h5>
+										<div class="buy-tickets">
+											<a href="#">Start Contest</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="#"><img src="images/o3.jpg" height="200" alt=""/></a>
+									<div class="slide-title"><h4>Qurukshetra</h4></div>
+									<div class="date-city">
+										<h5>Started already!!</h5>
+										<div class="buy-tickets">
+											<a href="#">Log in to play now</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="#"><img src="images/o1.png"  height="200" alt=""/></a>
+									<div class="slide-title"><h4>Treasure Quest</h4></div>
+									<div class="date-city">
+										<h5>Yet to schedule</h5>
+										<div class="buy-tickets">
+											<a href="#">Start Contest</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="#"><img src="images/o2.jpg"  height="200" alt=""/></a>
+									<div class="slide-title"><h4>Mannequin Challenge</h4></div>
+									<div class="date-city">
+										<h5>Yet to schedule</h5>
+										<div class="buy-tickets">
+											<a href="#">Start Contest</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="#"><img src="images/o5.jpeg"  height="200"  alt=""/></a>
+									<div class="slide-title"><h4>Photography</h4></div>
+									<div class="date-city">
+										<h5>Yet to schedule</h5>
+										<div class="buy-tickets">
+											<a href="#">Start Contest</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="#"><img src="images/o7.jpg"  height="200" alt=""/></a>
+									<div class="slide-title"><h4>Fantasy football</h4></div>
+									<div class="date-city">
+										<h5>Yet to schedule</h5>
+										<div class="buy-tickets">
+											<a href="#">Start Contest</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="#"><img src="images/o6.jpg"  height="200" alt=""/></a>
+									<div class="slide-title"><h4>Connexions</h4></div>
+									<div class="date-city">
+										<h5>Yet to schedule</h5>
+										<div class="buy-tickets">
+											<a href="#">Start Contest</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="#"><img src="images/o3.jpg" height="200" alt=""/></a>
+									<div class="slide-title"><h4>Qurukshetra</h4></div>
+									<div class="date-city">
+										<h5>Started already!!</h5>
+										<div class="buy-tickets">
+											<a href="#">Log in to play now</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<script type="text/javascript">
+							
+							var blink_speed = 300;
+var t = setInterval(function () {
+    var ele = document.getElementById('blinker');
+    ele.style.visibility = (ele.style.visibility == 'hidden' ? '' : 'hidden');
+}, blink_speed);
+
+						$(window).load(function() {
+							
+						  $("#flexiselDemo1").flexisel({
+								visibleItems: 5,
+								animationSpeed: 1000,
+								autoPlay: true,
+								autoPlaySpeed: 3000,    		
+								pauseOnHover: false,
+								enableResponsiveBreakpoints: true,
+								responsiveBreakpoints: { 
+									portrait: { 
+										changePoint:480,
+										visibleItems: 2
+									}, 
+									landscape: { 
+										changePoint:640,
+										visibleItems: 3
+									},
+									tablet: { 
+										changePoint:800,
+										visibleItems: 4
+									}
+								}
+							});
+							});
+						</script>
+						<script type="text/javascript" src="js/jquery.flexisel.js"></script>	
+						</div>
+								</div>
+						<!--body wrapper end-->
+						<!-- /w3layouts-agile -->
+					</div>
+			  
+			</div>
+        
+   </section>
+   	 <!-- /wthree-agile -->
+<script src="js/jquery.nicescroll.js"></script>
+<script src="js/scripts.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
