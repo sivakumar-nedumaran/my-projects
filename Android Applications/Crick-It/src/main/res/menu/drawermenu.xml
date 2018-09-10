@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item android:title=""
+        android:id="@+id/nav_item_dummy"/>
+
+    <item android:title="Form Team"
+          android:id="@+id/nav_item_request_outpass"
+          android:icon="@drawable/draft"/>
+
+    <item android:title="My Teams"
+        android:id="@+id/nav_item_denied_outpass"
+        android:icon="@drawable/spam"/>
+
+    <item android:title="Find Players"
+        android:id="@+id/nav_item_approve_outpass"
+        android:icon="@drawable/composea"/>
+
+    <item android:title="Find Teams"
+        android:id="@+id/nav_item_view_op_std"
+        android:icon="@drawable/ss"/>
+
+
+    <group android:id="@+id/group_settings_id">
+
+        <item android:title="Edit my profile"
+            android:id="@+id/nav_item_view_profile"
+            android:icon="@drawable/compose"/>
+
+        <item android:title="Log out"
+            android:id="@+id/nav_item_logout"
+            android:icon="@drawable/settings"/>
+
+    </group>
+
+
+</menu>
