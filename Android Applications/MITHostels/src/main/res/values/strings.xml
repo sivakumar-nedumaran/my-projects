@@ -1,0 +1,39 @@
+<resources>
+
+    <string name="app_name">MIT Hostels</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_name">The name should be min 6 characters</string>
+    <string name="error_invalid_contact">Contact no should be 10 digits</string>
+    <string name="error_invalid_password">The password should be min 6 characters</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="title_activity_help_center">Help Center</string>
+    <string name="student_help">Students Help</string>
+    <string name="stud0"> Login </string>
+    <string name="std0"> Students are required to login with their register no and the password given to them by the university. Remember to select the \'students\' portal before pressing the login button. Once logged in, the student main page will be displayed with a navigation bar in top left corner and request outpass page loaded by default.</string>
+    <string name="stud1"> Request Outpass </string>
+    <string name="std1"> Fill in all the fields of the request outpass form with valid details and submit for approval. Note that outpass should be requested atleast 3 hours prior to leaving.</string>
+    <string name="stud2"> View All Outpasses </string>
+    <string name="std2"> Shows a list of all the outpasses that have been requested by the student and their statuses. Clicking on any item will dislay the outpass.</string>
+    <string name="stud3"> View Faculties </string>
+    <string name="std3"> Shows a list of all the hostel administration faculties and residential counsellors. Clicking on any item will display their contact details.</string>
+    <string name="stud4"> Log out </string>
+    <string name="std4"> Logs out of the current session. Note that for ease of use, the session will remain logged in the device, until it is voluntarily logged out.</string>
+    <string name="faculty_help">Faculty Help</string>
+    <string name="fac00"> Register </string>
+    <string name="fc00"> Faculties are required to register themselves before logging in. Select the faculty portal and then click on \'register now\' text in the login page to go to registration page. Fill in all the details. In the last field, enter the faculty registration password given to you and then click on \'register\' button.</string>
+    <string name="fac0"> Login </string>
+    <string name="fc0"> Login with the username and password entered during registration.</string>
+    <string name="fac1"> Pending Outpasses (Only RC\'s)</string>
+    <string name="fc1"> Shows a list of all the pending outpasses applied by the students of the block of the RC logged in. Clicking on any list item will display the respective outpass with buttons to approve or deny the request.</string>
+    <string name="fac3"> Approved Outpasses </string>
+    <string name="fc3"> Select the required block and date to view a list of all the students who have been granted outpass that day.</string>
+    <string name="fac2"> Denied Outpasses (Only RC\'s) </string>
+    <string name="fc2"> Select the required date to view a list of all the denied outpass requests for that day. Clicking on the list item will display the respective outpass with a button to reapprove the outpass.</string>
+    <string name="fac5"> View Faculties </string>
+    <string name="fc5"> Shows a list of all the hostel administration faculties and residential counsellors. Clicking on any item will display their contact details.</string>
+    <string name="fac6"> Edit my profile </string>
+    <string name="fc6"> Shows the profile of the faculty logged in. Edit the required info and hit the button to update profile.</string>
+    <string name="fac7"> Log out </string>
+    <string name="fc7"> Logs out of the current session. Note that for ease of use, the session will remain logged in the device, until it is voluntarily logged out.</string>
+
+</resources>

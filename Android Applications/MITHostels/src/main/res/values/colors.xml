@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#085682</color>
+    <color name="colorPrimaryDark">#033855</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="black">#000</color>
+    <color name="orange">#085682</color>
+    <color name="white">#FFF</color>
+    <color name="red_transparent">#66FF0000</color>
+    <color name="approve">#33CC33</color>
+    <color name="deny">#FF6347</color>
+    <color name="loginbg">#033855</color>
+</resources>
